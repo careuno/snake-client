@@ -13,9 +13,9 @@ const connect = function () {
   conn.on('connect', (socket) => {
     conn.write('Name: BOB')
     // conn.write('Move: up')
-    setInterval(() => {
-      conn.write('Move: up')
-    }, 50)
+    // setInterval(() => {
+    //   conn.write('Move: up')
+    // }, 50)
 
     console.log("you've connected to the server")
   });
