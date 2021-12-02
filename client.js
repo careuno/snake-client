@@ -11,6 +11,7 @@ const connect = function () {
   conn.setEncoding("utf8");
  
   conn.on('connect', (socket) => {
+    conn.write('Name: BOB')
     console.log("you've connected to the server")
   });
 
