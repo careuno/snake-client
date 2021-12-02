@@ -54,7 +54,8 @@ EVENT HANDLER - code that defines what to do when an event occurs
 const { connect } = require("./client");
 const { setupInput } = require("./input");
 
-console.log("Connecting ...");
-connect();
 
-setupInput();
+console.log("Connecting ...");
+
+
+setupInput(connect()); //https://web.compass.lighthouselabs.ca/days/w02d3/activities/881
