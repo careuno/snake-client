@@ -32,34 +32,22 @@ EVENT HANDLER - code that defines what to do when an event occurs
 //                                     //https://nodejs.org/api/net.html#net_class_net_socket
 //   // code that does something       // connect is an event that happens when a succesful connection is made
 // });
+//                                     net.Server events                  
 //                                     Event: 'close'
 //                                     Event: 'connection'
 //                                     Event: 'error'
 //                                     Event: 'listening'
+//                                     net.Socket events    
+                                      // Event: 'close'
+                                      // Event: 'connect'
+                                      // Event: 'data'
+                                      // Event: 'drain'
+                                      // Event: 'end'
+                                      // Event: 'error'
+                                      // Event: 'lookup'
+                                      // Event: 'ready'
+                                      // Event: 'timeout'
 
 
-const net = require("net");
 
-// establishes a connection with the game server
-const connect = function () {
-  const conn = net.createConnection({
-    host: '165.227.47.243',
-    port: 50541,
-  });
-
-  // interpret incoming data as text
-  conn.setEncoding("utf8");
- 
-  conn.on("connect", (socket) => {
-    console.log("you've connected to the server")
-  });
-
-  conn.on('data', (data) => {
-    console.log(data);
-  });
-
-  return conn;
-};
-
-console.log("Connecting ...");
-connect();
+const { connect } = require("./client.js");
