@@ -27,8 +27,8 @@ const connect = function () {
   return conn;
 };
 
-console.log("Connecting ...");
-connect();
+//console.log("Connecting ..."); 
+//connect();//called in play.js, if you have both you make two snakes LOL
 
 module.exports = {
   connect,
