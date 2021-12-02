@@ -33,7 +33,7 @@ const handleUserInput = function (key) {
     connection.write('Move: down');
   }
   if (key === 'd') {
-    connection.write('Move: right');
+    connection.write('Move: right');  //OPTIONAL: https://web.compass.lighthouselabs.ca/days/w02d3/activities/883 turning more things into constants
   }
   if (key === 'e') {
     connection.write('Say: I\'ll eat you');
